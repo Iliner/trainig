@@ -1,0 +1,12 @@
+{% extends 'dronovone/base.html' %}
+
+
+{% block title%}{{ good.name }}::{{ good.category.name }}{% endblock %}
+{% block main %}
+<h2>{{good.name}}</h2>
+<p clas='category'>Категория: {{good.category.name}}</p>
+<p>{{ good.description|linebreaksbr }}</p>
+<p class='not-in-stock'>{% if not good.in_stock %}Нет в наличии {% endif %}</p>
+<p><a href="http://127.0.0.1:8000{% url 'index' id=good.category.id %}?page={{ pn }}">Назад</a></p>
+{% endblock %}
+
