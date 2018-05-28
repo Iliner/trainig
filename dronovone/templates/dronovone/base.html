@@ -18,7 +18,7 @@
 	{% for cat in cats %}
 		<li><a href='{% url "index" id=cat.id %}'>{{ cat.name }}</a></li>
 	{% endfor %}
-</ul>
+	</ul>
 </div>	
 <div id="main">
 	{% block main %}
