@@ -1,5 +1,5 @@
 from django.conf.urls import url 
-from . import views
+#from . import views
 from dronovone.twviews import GoodListView, GoodDetailView
 
 # urlpatterns = [
